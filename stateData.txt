@@ -1,0 +1,52 @@
+Class               		Function
+
+1. Syntax is complex 		1. Syntax is Easy
+
+2. render is needed		2. Render is not needed.
+
+3. Constructor is present 	3. There is no constructor.
+
+4. It is a stateful component.  4. It is a stateless component.
+
+5. Life cycle Methods are present. 5. No life cycle methods.
+
+Hooks
+
+It is a special feature of the function-based components.
+
+Ex:- useSate, useEffect, useRef,... 
+
+Rule of hooks
+
+Always use hooks at the top level.
+
+
+1. useState(initial_value):
+
+	It is used to handle the local state in the function component.
+	The return type of the useState is an array.
+
+
+	let [initial_value,function] = useState(initial_value)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
