@@ -299,6 +299,36 @@
         "index": "a1",
         "typeName": "shape"
       },
+      "shape:iIXD-ijIghN7f1_5JJz7R": {
+        "x": 124.25293380285177,
+        "y": -161.256074049158,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:iIXD-ijIghN7f1_5JJz7R",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "m",
+          "w": 8,
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "a84yM",
+        "typeName": "shape"
+      },
       "binding:DHvpbc74xNCwFlKeJYXTT": {
         "meta": {},
         "id": "binding:DHvpbc74xNCwFlKeJYXTT",
@@ -712,6 +742,93 @@
         "meta": {},
         "id": "document:document",
         "typeName": "document"
+      },
+      "shape:bZ46Bm3ybpm0KOXJXF1zA": {
+        "x": -106.4228350516085,
+        "y": -192.6295880089595,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:bZ46Bm3ybpm0KOXJXF1zA",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "m",
+          "w": 872.5639038085938,
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Props"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "1. Props are properties in React.js."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "2. It is an object like in JavaScript."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "3. It is used to send data from one component to another component."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "4. We can send data only in one direction, parent to child "
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "a99Nf",
+        "typeName": "shape"
       }
     },
     "schema": {
@@ -759,12 +876,12 @@
       {
         "pageId": "page:page",
         "camera": {
-          "x": 0,
-          "y": 0,
-          "z": 1
+          "x": 482.70114765192056,
+          "y": 257.059785723179,
+          "z": 0.4053329505935068
         },
         "selectedShapeIds": [
-          "shape:9I-mlN6u2pOmkm_8Ex4GV"
+          "shape:bZ46Bm3ybpm0KOXJXF1zA"
         ],
         "focusedGroupId": null
       }
