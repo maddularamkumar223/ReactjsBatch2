@@ -1,0 +1,12 @@
+p {
+  color: red;
+  border: solid red;
+}
+
+.para {
+  background-color: black;
+}
+
+#paraTag {
+  font-size: 48px;
+}
