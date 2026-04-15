@@ -35,20 +35,43 @@ const Parent = () => {
       cost: 1800,
     },
   ];
-
   let [costValue, setCostValue] = useState({
     min: 0,
     max: 0,
   });
-
+  let [cartValue, setCartValue] = useState(0);
+  // ! Update min and max values
   let updatePrices = (minValue, maxValue) => {
     setCostValue({ min: minValue, max: maxValue });
   };
-  console.log(costValue);
+  // ! Update CartValue
+  let updateCartValue = () => {
+    setCartValue(cartValue + 1);
+  };
+  // ! For Filter the products
+  let filterData = () => {
+    let data = products.filter(
+      (product) =>
+        product.cost >= costValue.min && product.cost <= costValue.max,
+    );
+    return data;
+  };
   return (
     <div>
       <Buttons updatePrices={updatePrices} />
-      <DataDisplayContainer products={products} />
+      {costValue.min === 0 && costValue.max === 0 ? (
+        <DataDisplayContainer
+          products={products}
+          cartValue={cartValue}
+          updateCartValue={updateCartValue}
+        />
+      ) : (
+        <DataDisplayContainer
+          products={filterData()}
+          cartValue={cartValue}
+          updateCartValue={updateCartValue}
+        />
+      )}
     </div>
   );
 };

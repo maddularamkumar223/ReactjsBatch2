@@ -6,6 +6,7 @@ const Buttons = ({ updatePrices }) => {
       <button onClick={() => updatePrices(0, 500)}>Less Than 500</button>
       <button onClick={() => updatePrices(500, 1000)}>500-1000</button>
       <button onClick={() => updatePrices(1000, 2000)}>1000-2000</button>
+      <button onClick={() => updatePrices(0, 0)}>All</button>
     </div>
   );
 };

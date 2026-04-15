@@ -1,15 +1,17 @@
 import React from "react";
 
-const DataDisplayContainer = ({ products }) => {
-  console.log(products);
+const DataDisplayContainer = ({ products, cartValue, updateCartValue }) => {
   return (
     <div>
+      <p>
+        Cart <sup>{cartValue}</sup>
+      </p>
       {products.map((product) => {
         return (
           <>
             <p>Product: {product.name}</p>
             <p>Price: {product.cost}</p>
-            <button>Add To cart</button>
+            <button onClick={updateCartValue}>Add To cart</button>
           </>
         );
       })}
