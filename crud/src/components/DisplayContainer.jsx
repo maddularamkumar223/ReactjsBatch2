@@ -1,15 +1,27 @@
-const DisplayContainer = ({ details }) => {
+const DisplayContainer = ({ details, deleteData, singleProduct }) => {
   return (
     <>
       {details.map((product) => {
         return (
-          <div>
+          <div key={product.id}>
             <p>Product Name : {product.productName}</p>
             <p>Product Price : {product.price}</p>
             <p>Product Quantity : {product.quantity}</p>
             <button>Add To Cart</button>
-            <button>Edit</button>
-            <button>Delete</button>
+            <button
+              onClick={() => {
+                singleProduct(product.id);
+              }}
+            >
+              Edit
+            </button>
+            <button
+              onClick={() => {
+                deleteData(product.id);
+              }}
+            >
+              Delete
+            </button>
           </div>
         );
       })}

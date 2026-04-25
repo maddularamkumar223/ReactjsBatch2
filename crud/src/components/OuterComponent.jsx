@@ -8,14 +8,53 @@ const OuterComponent = () => {
   let updateDetails = (data) => {
     setDetails([...details, data]);
   };
-  console.log(details);
+
+  let deleteData = (id) => {
+    setDetails(details.filter((product) => product.id !== id));
+  };
+
+  let getSingleProduct = (id) => {
+    let singleProduct = details.find((product) => product.id === id);
+    setProductDetails({ id: crypto.randomUUID(), ...singleProduct });
+    setDetails(details.filter((product) => product.id !== id));
+  };
+  let [productDetails, setProductDetails] = useState({
+    id: crypto.randomUUID(),
+    productName: "",
+    price: "",
+    quantity: "",
+  });
+
+  let handleChange = (e) => {
+    let { value, name } = e.target;
+    setProductDetails({ ...productDetails, [name]: value });
+  };
+  let handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(productDetails);
+    updateDetails(productDetails);
+    setProductDetails({
+      id: crypto.randomUUID(),
+      productName: "",
+      price: "",
+      quantity: "",
+    });
+  };
   return (
     <section>
       <article>
-        <Fom updateDetails={updateDetails} />
+        <Fom
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          productDetails={productDetails}
+        />
       </article>
       <article>
-        <DisplayContainer details={details} />
+        <DisplayContainer
+          details={details}
+          deleteData={deleteData}
+          singleProduct={getSingleProduct}
+        />
       </article>
     </section>
   );

@@ -1,27 +1,6 @@
-import { useState } from "react";
-
-const Fom = ({ updateDetails }) => {
-  let [productDetails, setProductDetails] = useState({
-    productName: "",
-    price: "",
-    quantity: "",
-  });
+const Fom = ({ productDetails, handleChange, handleSubmit }) => {
   let { productName, price, quantity } = productDetails;
 
-  let handleChange = (e) => {
-    let { value, name } = e.target;
-    setProductDetails({ ...productDetails, [name]: value });
-  };
-  let handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(productDetails);
-    updateDetails(productDetails);
-    setProductDetails({
-      productName: "",
-      price: "",
-      quantity: "",
-    });
-  };
   return (
     <div>
       <form action="" onSubmit={handleSubmit}>
