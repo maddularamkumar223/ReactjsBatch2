@@ -1,9 +1,16 @@
-
+import { useContext } from "react";
+import { productContext } from "./../comtext/ProductContext";
+import DsipalyProducts from "./DsipalyProducts";
 
 const Men = () => {
-  return (
-    <div>Men</div>
-  )
-}
+  let products = useContext(productContext);
 
-export default Men
+  let filterMenProducts = products.filter(
+    (product) => product.category === "men",
+  );
+  console.log(filterMenProducts);
+  console.log(products);
+  return <DsipalyProducts filterProducts={filterMenProducts} />;
+};
+
+export default Men;

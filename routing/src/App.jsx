@@ -8,6 +8,7 @@ import Products from "./compoent/Products";
 import Men from "./compoent/Men";
 import Women from "./compoent/Women";
 import Kids from "./compoent/Kids";
+import DisplaySigleProduct from "./compoent/DisplaySigleProduct";
 
 const App = () => {
   console.log(BrowserRouter);
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="women" element={<Women />} />
           <Route path="kids" element={<Kids />} />
         </Route>
+        <Route path="/singleProduct/:id" element={<DisplaySigleProduct />} />
       </Routes>
     </BrowserRouter>
   );
