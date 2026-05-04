@@ -1,10 +1,19 @@
 import { createRoot } from "react-dom/client";
 import App from "./App";
-import ProductProvider from "./comtext/ProductContext";
+import { RouterProvider } from "react-router-dom";
+import routes from "./route/Route";
+// import ProductProvider from "./comtext/ProductContext";
+// import routes from './route/Route';
+// createRoot(document.getElementById("root")).render(
+//   <ProductProvider>
+//     <App />
+//   </ProductProvider>,
+// );
+
 createRoot(document.getElementById("root")).render(
-  <ProductProvider>
+  <RouterProvider router={routes}>
     <App />
-  </ProductProvider>,
+  </RouterProvider>,
 );
 
 // ! Routing is used to redirect from one page another page without reloading the page.

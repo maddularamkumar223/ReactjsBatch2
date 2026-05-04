@@ -7,7 +7,7 @@ const DisplaySigleProduct = () => {
   console.log(id);
   let products = useContext(productContext);
   console.log(products);
-  let findSingleProduct = products.find((value) => value.id === Number(id));
+  let findSingleProduct = products.find((value) => value.id == id);
   console.log(findSingleProduct);
   return (
     <div>
