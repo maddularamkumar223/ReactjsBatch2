@@ -1,0 +1,84 @@
+Component Life Cycle Methods.
+
+
+
+1. Mounting
+
+	1. constructor
+		It is the first method that will load in the component.
+		Constructor is the best place to initialize the values.
+		It will load only once.
+
+	2. getDerivedStateFromProps
+
+		It will execute before the render method.
+		It will update the state by using the props.
+		It is a static method.
+
+	3. render
+
+		It renders every time when any changes will happen.
+
+	4. componentDidMount()
+
+		It will execute after the render method.
+		If we want to call the APIs, this is the best place
+
+
+2. Updating: Here, the data will be updated.
+	
+	1. getDerivedStateFromProps
+
+		It will execute before the render method.
+		It will update the state by using the props.
+		It is a static method.
+
+
+	2. shouldComponemtUpadte
+			
+			It will return the Boolean values.
+			It will execute before the render method.
+			The default value of the shouldCompoentUpdate is true.
+	3. render
+		It renders every time when any changes will happen.
+
+	4. componetDidUpdate
+
+		It will render when any update is happen.
+
+
+
+3. unmounting
+
+		1. componentWillUnmount
+		    When the component is removed at a time, it will trigger
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+		
