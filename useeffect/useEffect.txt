@@ -1,0 +1,31 @@
+useEffect
+
+It is used to use the component life cycle in the function based component.
+
+syntax:- useEffect(call back,  dep)
+
+1. render method
+
+	useEffect(()=>{//code})
+	
+	When ever the ui change it will render
+
+2. componentDidMount : If we want use the useEffect as a componentDidMount We need to add the dependencies
+
+	useEffect(()=>{//code},[])
+
+3. componentDidUpdate:- When the dependencies will change then it will trigger
+
+	useEffect(()=>{//code},[list  of dependencies])
+
+4. componentWillUnmount
+
+		useEffect(()=>{
+			return ()=>{//code}
+		})  
+
+
+
+
+
+
