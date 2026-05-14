@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Form from "../form/Form";
+import { authContext } from "../../utilities";
 
 const Register = () => {
   let [details, setDetails] = useState({
@@ -15,6 +16,8 @@ const Register = () => {
   let { name, email, contact, password, confirmPassword, dob, gender, role } =
     details;
 
+  let { addUser, loading } = useContext(authContext);
+  console.log(addUser);
   let handleChange = (e) => {
     let { value, name } = e.target;
     setDetails({ ...details, [name]: value });
@@ -35,6 +38,10 @@ const Register = () => {
       alert("Fill All The Fields");
     } else if (password === confirmPassword) {
       console.log(details);
+      addUser(details);
+      if (loading === true) {
+        alert("Register Successful");
+      }
     } else {
       alert("Password Mismatch");
     }

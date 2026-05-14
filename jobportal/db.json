@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "name": "Ram",
+      "email": "ram@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "dob": "2026-04-28",
+      "gender": "male",
+      "contact": "1234567890",
+      "role": "job seeker",
+      "id": "VrBUgm8hXkM"
+    },
+    {
+      "name": "Ravi",
+      "email": "ravi@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "dob": "2026-04-28",
+      "gender": "male",
+      "contact": "1234567890",
+      "role": "job seeker",
+      "id": "mtcgeEqBjEU"
+    },
+    {
+      "name": "hr",
+      "email": "hr@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "dob": "2026-04-26",
+      "gender": "female",
+      "contact": "1234567890",
+      "role": "hiring",
+      "id": "8vK1DfWahRE"
+    }
+  ],
+  "jobs": [
+    {
+      "companyName": "TCS",
+      "jobRole": "Software Developer",
+      "salary": "6lpa",
+      "skills": "Html, Css, Js, React, Java, Python, Spring, SpringBoot",
+      "experience": "Fresher",
+      "id": "kwTofHLYfTE"
+    },
+    {
+      "companyName": "Google",
+      "jobRole": "SE1",
+      "salary": "50 lpa",
+      "skills": "Any Skill Related to Coding ",
+      "experience": "0-1 years",
+      "id": "L8vFkTXikO0"
+    },
+    {
+      "companyName": "Microsoft",
+      "jobRole": "Devops",
+      "salary": "15lpa",
+      "skills": "Cloud",
+      "experience": "2",
+      "id": "NqjQeAqS1e4"
+    },
+    {
+      "companyName": "asdfs",
+      "jobRole": "dsfsda",
+      "salary": "42lpa",
+      "skills": "dfs",
+      "experience": "sdfgd",
+      "id": "a5xWjNWzpuA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

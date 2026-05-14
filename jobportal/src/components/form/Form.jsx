@@ -3,7 +3,7 @@ const Form = ({ data, handleChange, handleSubmit }) => {
     return (
       <aside value={state.state} onChange={handleChange} key="gender">
         <label htmlFor={state.name}>{state.name}</label>
-        {state.valueData.map((data) => {
+        {state?.valueData.map((data) => {
           return (
             <>
               <input type="radio" name={state.name} value={data} />
@@ -17,7 +17,7 @@ const Form = ({ data, handleChange, handleSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      {data.map((inputData) => {
+      {data?.map((inputData) => {
         if (inputData.name === "gender" || inputData.name === "role") {
           return gr(inputData);
         } else {
