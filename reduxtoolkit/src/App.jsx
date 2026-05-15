@@ -1,10 +1,9 @@
-import React from "react";
-import Counter from "./components/Counter";
+import Layout from "./components/layout/Layout";
 
 const App = () => {
   return (
     <div>
-      <Counter />
+      <Layout />
     </div>
   );
 };
