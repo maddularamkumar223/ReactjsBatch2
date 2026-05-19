@@ -1,6 +1,7 @@
 // import { useMemo, useState } from "react";
 
-import JobFiltering from "./component/JobFiltering";
+// import JobFiltering from "./component/JobFiltering";
+import UseCallBack from "./component/useCallBack/UseCallBack";
 
 // const App = () => {
 //   let [count, setCount] = useState(0);
@@ -35,7 +36,8 @@ import JobFiltering from "./component/JobFiltering";
 const App = () => {
   return (
     <div>
-      <JobFiltering />
+      {/* <JobFiltering /> */}
+      <UseCallBack />
     </div>
   );
 };

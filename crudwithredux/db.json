@@ -1,0 +1,15 @@
+{
+  "tasks": [
+    {
+      "task": "React js",
+      "description": "It is a single page application",
+      "id": "BEUuDJy8v6Q"
+    },
+    {
+      "task": "Js",
+      "description": "Multipage Application",
+      "id": "2sGUp2QZzq4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
