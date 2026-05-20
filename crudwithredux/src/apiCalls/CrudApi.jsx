@@ -11,3 +11,16 @@ export let createTask = createAsyncThunk("tasks/createTask", async (data) => {
   });
   return response;
 });
+
+export let fetchTasks = createAsyncThunk("task/fetchTask", async () => {
+  let response = await fetch(baseUrl);
+  let responseData = await response.json();
+  return responseData;
+});
+
+export let deleteData = createAsyncThunk("task/deleteTask", async (id) => {
+  await fetch(`${baseUrl}/${id}`, {
+    method: "DELETE",
+  });
+  return id;
+});
