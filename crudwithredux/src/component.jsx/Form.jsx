@@ -1,14 +1,22 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { createTask } from "../apiCalls/CrudApi";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { createTask, updateDataFunction } from "../apiCalls/CrudApi";
 
 const Form = () => {
+  let singleData = useSelector((state) => state.curd.singleData);
   let [taskDetails, setTaskDetails] = useState({
     task: "",
     description: "",
   });
   let { task, description } = taskDetails;
   let dispatch = useDispatch();
+
+  useEffect(() => {
+    setTaskDetails({
+      task: singleData.task,
+      description: singleData.description,
+    });
+  }, [singleData.task, singleData.description]);
 
   let handleChange = (e) => {
     let { value, name } = e.target;
@@ -18,7 +26,15 @@ const Form = () => {
   let handleSubmit = (e) => {
     e.preventDefault();
     console.log(taskDetails);
-    dispatch(createTask(taskDetails));
+    if (singleData !== "") {
+      let details = {
+        id: singleData.id,
+        ...taskDetails,
+      };
+      dispatch(updateDataFunction(details));
+    } else {
+      dispatch(createTask(taskDetails));
+    }
     setTaskDetails({
       task: "",
       description: "",

@@ -9,7 +9,8 @@ export let createTask = createAsyncThunk("tasks/createTask", async (data) => {
     },
     body: JSON.stringify(data),
   });
-  return response;
+  const value = await response.json();
+  return value;
 });
 
 export let fetchTasks = createAsyncThunk("task/fetchTask", async () => {
@@ -24,3 +25,19 @@ export let deleteData = createAsyncThunk("task/deleteTask", async (id) => {
   });
   return id;
 });
+
+export let updateDataFunction = createAsyncThunk(
+  "task/updateTask",
+  async (userData) => {
+    let response = await fetch(`${baseUrl}/${userData.id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
+
+    let data = await response.json();
+    return data;
+  },
+);

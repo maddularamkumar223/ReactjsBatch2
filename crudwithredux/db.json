@@ -1,14 +1,9 @@
 {
   "tasks": [
     {
-      "task": "React",
-      "description": "Single Page Application",
-      "id": "gPdQ4Y52cTw"
-    },
-    {
-      "task": "Python",
-      "description": "Backend",
-      "id": "gmsKUP8r-Iw"
+      "task": "React Js",
+      "description": "Single page APplication",
+      "id": "YlG_9boVXno"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

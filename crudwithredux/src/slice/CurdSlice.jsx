@@ -1,16 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createTask, deleteData, fetchTasks } from "../apiCalls/CrudApi";
+import {
+  createTask,
+  deleteData,
+  fetchTasks,
+  updateDataFunction,
+} from "../apiCalls/CrudApi";
 
 let initialState = {
   loading: false,
   tasks: [],
   message: "",
   status: "",
+  singleData: "",
 };
 let crudSlice = createSlice({
   name: "curdSlice",
   initialState,
-  reducers: {},
+  reducers: {
+    updateValue: (state, action) => {
+      state.singleData = action.payload;
+    },
+  },
   extraReducers: (builders) => {
     builders
       // ! Create The Task
@@ -42,8 +52,19 @@ let crudSlice = createSlice({
           (task) => task.id !== action.payload,
         );
         state.tasks = filterData;
+      })
+
+      // ! UpdateTask
+
+      .addCase(updateDataFunction.fulfilled, (state, action) => {
+        let findIndex = state.tasks.findIndex(
+          (task) => task.id === action.payload.id,
+        );
+        state.tasks[findIndex] = action.payload;
+        state.singleData = "";
       });
   },
 });
 
+export let { updateValue } = crudSlice.actions;
 export default crudSlice.reducer;
